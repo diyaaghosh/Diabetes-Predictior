@@ -1,12 +1,8 @@
 import subprocess
 import sys
 
+import joblib
 
-try:
-    import joblib
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "joblib"])
-    import joblib
 
 import streamlit as st
 import pandas as pd
@@ -182,4 +178,5 @@ if submitted:
     if prob is not None:
         st.progress(int(prob * 100))
         st.write(f"**Confidence:** {prob*100:.2f}%")
+
 
