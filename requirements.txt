@@ -1,8 +1,12 @@
-# Core Libraries
+pip==25.3
+setuptools>=65.5.1
+wheel
+
 numpy
 pandas
 scikit-learn
-joblib
+joblib==1.4.2
+
 
 # ML Models
 xgboost
