@@ -1,13 +1,24 @@
+# Core dependencies
 numpy
 pandas
 scikit-learn
 joblib
+
+# Machine learning models
 xgboost
 lightgbm
 catboost
+
+# Deep learning (if you use the neural network)
 tensorflow
 keras
+
+# Visualization (optional)
 matplotlib
 seaborn
+
+# Web app
 streamlit
+
+# Compatibility fixes
 protobuf==3.20.3
