@@ -11,12 +11,10 @@ This app predicts the likelihood of diabetes based on user health inputs such as
 
 -  Clean and interactive **Streamlit UI**
 -  Accepts multiple health parameters
--  Uses the **best-trained ML model** (Logistic Regression, Random Forest, CatBoost, etc.)
--  Displays confidence score and prediction message
--  Shows processed input data for transparency
--  Beautiful color-coded output messages
--   *Non-Diabetic*: “You are likely not diabetic.”
--  *Diabetic*: “You are likely diabetic. Please consult a doctor.”
+-  Uses the **best-trained ML model** (XGBoost)
+-  Displays confidence score and prediction message and Advice
+
+
 
 ---
 
@@ -25,10 +23,8 @@ This app predicts the likelihood of diabetes based on user health inputs such as
 The backend model was trained on the **Pima Indians Diabetes Dataset**, using multiple algorithms:
 - Logistic Regression  
 - Random Forest  
-- CatBoost  
-- LightGBM  
 - XGBoost  
-- Neural Network  
+
 
 After evaluation, the model with **highest AUC and F1-score** was chosen as the best and saved as:
 
@@ -41,9 +37,8 @@ After evaluation, the model with **highest AUC and F1-score** was chosen as the 
 |------------|-------------|
 | **Frontend** | Streamlit |
 | **Backend** | Python |
-| **ML Frameworks** | Scikit-learn, CatBoost, LightGBM, XGBoost |
+| **ML Frameworks** | Scikit-learn, XGBoost |
 | **Model Saving** | joblib |
-| **Visualization** | matplotlib, seaborn |
 | **Dataset** | Pima Indians Diabetes Dataset (UCI Repository) |
 
 ---
@@ -83,12 +78,13 @@ streamlit run app.py
 
 ├── chat.py                      # Streamlit app main file
 ├── model_columns.pkl
-├── best_diabetes_model.pkl   # Saved ML model
+├── diabetes_model.pkl   # Saved ML model
 ├── requirements.txt            # Dependencies
 ├── README.md                   # Project documentation
 ├── dataset.csv                 # (optional) Training dataset
-└── assets/
-    └── app_preview.png         # Screenshot of the app
+|__ scaer.pkl
+|__ imputer.pkl
+|
 ```
 
 
