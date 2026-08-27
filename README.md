@@ -1,6 +1,7 @@
 #  Diabetes Prediction App
 
 
+live demo : https://diabetes-predictior.vercel.app/
 
 **AI-powered early health risk detection system** built using **Streamlit**, **Python**, and **Machine Learning**.  
 This app predicts the likelihood of diabetes based on user health inputs such as glucose level, insulin, BMI, and age.
