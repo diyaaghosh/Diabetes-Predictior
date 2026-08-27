@@ -77,7 +77,10 @@ streamlit run app.py
 ### **File Structure**
 ```
 
-├── chat.py                      # Streamlit app main file
+├── chat.py     # Streamlit app main file
+|__app.py (flask)
+|__app1.py(fastapi)
+|                 
 ├── model_columns.pkl
 ├── diabetes_model.pkl   # Saved ML model
 ├── requirements.txt            # Dependencies
@@ -87,7 +90,12 @@ streamlit run app.py
 |__ imputer.pkl
 |
 ```
+run :
+```
+uvicorn app1:app --reload (for fastapi)
 
+python app.py (for flask)
+```
 
 ### **Dataset**
 ```
